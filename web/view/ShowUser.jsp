@@ -20,6 +20,7 @@
             <th>电话</th>
         </tr>
         <%
+            //获得存放学生信息的对象
             List<User> users=(List<User>) request.getAttribute("users");
             for (User user:
                  users) {

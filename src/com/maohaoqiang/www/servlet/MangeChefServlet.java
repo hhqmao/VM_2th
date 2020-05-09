@@ -15,6 +15,7 @@ import java.util.List;
 @WebServlet(name = "MangeChefServlet",value = "/MangeChefServlet")
 public class MangeChefServlet extends HttpServlet {
     @Override
+    //对厨师的增删
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String control=req.getParameter("control");
         if (control.equals("删除")){

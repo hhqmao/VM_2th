@@ -18,6 +18,7 @@ import java.util.List;
 @WebServlet(name = "checkServlet" ,value = "/CheckServlet")
 public class CheckServlet extends HttpServlet {
     @Override
+    //实现登陆
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)throws ServletException, IOException {
         int power=0;
         String name=req.getParameter("uname");
@@ -27,6 +28,7 @@ public class CheckServlet extends HttpServlet {
         power=userService.login(user);
         HttpSession session=req.getSession();
         if(power!=0){
+            //登陆成功，将必要信息放入session对象中
             session.setAttribute("uname",name);
             session.setAttribute("power",power);
         }
@@ -34,7 +36,7 @@ public class CheckServlet extends HttpServlet {
             case 0: resp.sendRedirect("/VM_Secong_war_exploded/view/Welcome.jsp");break;
             case 1:
                 List<Menu> menus=userService.selectAllMenu();
-            //获得所有菜品的信息
+                //获得所有菜品的信息
                 session.setAttribute("menus",menus);
                 session.setAttribute("partmenus",null);
                 resp.sendRedirect("/VM_Secong_war_exploded/view/UserView.jsp");

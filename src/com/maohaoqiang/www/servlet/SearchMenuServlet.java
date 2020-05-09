@@ -15,12 +15,14 @@ import java.util.List;
 @WebServlet(name = "SearchMenu",value = "/SearchMenuServlet")
 public class SearchMenuServlet extends HttpServlet {
     @Override
+    //查询菜品
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String menuname=req.getParameter("menuname");
         UserService userService=new UserService();
         List<Menu> partmenus=userService.selectMenu(menuname);
         HttpSession session=req.getSession();
         List<Menu> menus=(List<Menu>) session.getAttribute("menus");
+        //将刚刚充数据库中得到的查询结果中的数据和session中的同步
         if (menus!=null){
             for (Menu menu:
                     partmenus) {

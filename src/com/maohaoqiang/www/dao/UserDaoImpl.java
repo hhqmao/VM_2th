@@ -68,6 +68,7 @@ public class UserDaoImpl implements UserDao {
     }
 
     @Override
+    //新增用户
     public boolean insertUser(User user) {
         boolean succ=false;
         Connection conn=null;

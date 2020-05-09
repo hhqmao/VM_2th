@@ -13,6 +13,7 @@ public class ExitServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session=req.getSession();
+        //退出前清理session中的数据，避免下一次数据混乱
         session.invalidate();
         resp.sendRedirect("/VM_Secong_war_exploded/view/Welcome.jsp");
     }

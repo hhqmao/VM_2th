@@ -17,7 +17,7 @@
         <th>序号</th>
         <th>菜名</th>
     </tr>
-    <%
+    <%//获得存放记录的对象
         List<Record> recordList=(List<Record>) session.getAttribute("record");
         int number=1;
         for (Record record:

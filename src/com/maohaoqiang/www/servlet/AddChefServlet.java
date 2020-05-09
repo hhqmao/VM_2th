@@ -15,6 +15,7 @@ import java.util.List;
 @WebServlet(name = "AddChefServlet",value = "/AddChefServlet")
 public class AddChefServlet extends HttpServlet {
     @Override
+    //增加厨师
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String uno=req.getParameter("uno");
         String pwd=req.getParameter("pwd");

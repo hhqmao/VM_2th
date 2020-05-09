@@ -20,6 +20,7 @@ public class OderServlet extends HttpServlet {
         List<MenuItem> menuItemList =(List<MenuItem>) session.getAttribute("menusItem");
         String uname=(String) session.getAttribute("uname");
         UserService userService=new UserService();
+        //将数据传入service，实现点餐功能
         if(userService.cashControl(menuItemList,uname)){
             session.setAttribute("menusItem",null);
             req.setAttribute("success","success");

@@ -15,6 +15,7 @@ import java.util.List;
 @WebServlet(name = "ChefOperation",value = "/ChefOperationServlet")
 public class ChefOperationServlet extends HttpServlet {
     @Override
+    //厨师的操作
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String control=req.getParameter("control");
         ChefService chefService=new ChefService();

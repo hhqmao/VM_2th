@@ -17,6 +17,7 @@
         Integer control=(Integer)session.getAttribute("power");
         int a=1;
         String adss=null;
+        //从权限来区分路径
         if (control.equals(1)){
             adss="/VM_Secong_war_exploded/view/PersonalCenterView.jsp";
         }else {

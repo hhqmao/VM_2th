@@ -12,6 +12,7 @@ import java.io.IOException;
 public class UserOperationServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        //通过用户界面而非通过搜索界面进入菜单，partmenus为null
         HttpSession session=req.getSession();
         session.setAttribute("partmenus",null);
         resp.sendRedirect("/VM_Secong_war_exploded/view/ShowMenus.jsp");

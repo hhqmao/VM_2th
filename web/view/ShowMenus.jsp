@@ -15,13 +15,6 @@
 </head>
 <body>
 <form action="/VM_Secong_war_exploded/CartServlet">
-        <%
-        String error=(String)request.getAttribute("error");
-        if (error!=null){
-            out.print("请勾选菜名");
-        }
-    %>
-    <br>
     <table border="2px">
         <tr>
             <th>菜名</th>
@@ -31,7 +24,9 @@
             <th>库存</th>
         </tr>
         <%
+            //获得存放菜品信息的对象
             List<Menu> menus=(List<Menu>) session.getAttribute("partmenus");
+            //这里是用来判断这个对象是否为模糊查询得到的对象
             if (menus==null){
                  menus=(List<Menu>) session.getAttribute("menus");
             }

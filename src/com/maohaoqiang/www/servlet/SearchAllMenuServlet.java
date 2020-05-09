@@ -14,6 +14,7 @@ import java.util.List;
 
 @WebServlet(name = "SearchAllMenu",value = "/SearchAllMenuServlet")
 public class SearchAllMenuServlet extends HttpServlet {
+    //一开始获得所有菜品的信息
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         UserService userService=new UserService();

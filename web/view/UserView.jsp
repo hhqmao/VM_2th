@@ -13,6 +13,7 @@
 <body>
 <form action="/VM_Secong_war_exploded/SearchMenuServlet">
     <%
+        //判断下单是否成功并显示出来
         String success=(String)request.getAttribute("success");
         if(success!=null){
             out.print("下单成功");
