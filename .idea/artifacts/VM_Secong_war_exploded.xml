@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="VM_Secong:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/VM_Secong_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="VM_Secong/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="VM_Secong" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
